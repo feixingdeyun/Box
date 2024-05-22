@@ -132,6 +132,8 @@ public class ApiConfig {
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
         // Embedded Source : Update in Strings.xml if required
         String apiUrl = Hawk.get(HawkConfig.API_URL, HomeActivity.getRes().getString(R.string.app_source));
+        //视频源地址
+        apiUrl="http://饭太硬.top/tv";
         if (apiUrl.isEmpty()) {
             callback.error("源地址为空");
             return;
